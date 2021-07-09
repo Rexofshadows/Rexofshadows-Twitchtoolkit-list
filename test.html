@@ -131,7 +131,7 @@
                         <th>Karma Type</th>
                       </tr>
                     </thead>
-                    <tbody id="itemTable" class="table">
+                    <tbody id="eventTable" class="table">
                     </tbody>
                   </table>
                 </div>
@@ -151,7 +151,7 @@
                       </div>
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
-                  <p>Sort by clicking on table head!</p>
+                  <p>Sort by clicking on table head! (Tab WIP)</p>
                   <table class="table sortable">
                     <thead class="thead-light" >
                       <tr>
@@ -160,7 +160,7 @@
                         <th>Catagory</th>
                       </tr>
                     </thead>
-                    <tbody class="table">
+                    <tbody id="raceTable" class="table">
                     </tbody>
                   </table>
                 </div>
@@ -178,6 +178,20 @@
     <script>
       $(document).ready(function(){
         updateItemList();
+
+        $('.nav-tabs a').on('shown.bs.tab', function(event){
+          if($(event.target).text() == "Items"){
+            updateItemList();
+          }
+          else if ($(event.target).text() == "Events") {
+            updateEventList();
+          }
+          else if ($(event.target).text() == "Races") {
+            updateRaceList();
+          }
+        });
+
+
 
         $("#searchinput").on("keyup", function() {
           var value = $(this).val().toLowerCase();
@@ -216,32 +230,38 @@
 
         function updateItemList() {
           const element = document.getElementById("itemTable");
+          const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+            var myObj = JSON.parse(this.responseText);
+            for (var i = 0; i < myObj.total; i++) {
+              if(myObj.items[i].price > 0){
+                const row = document.createElement("tr")
+                row.innerHTML = "<td class='abr'>" + myObj.items[i].abr + "</td><td class='price'>" + myObj.items[i].price + "</td><td class='category'>" + myObj.items[i].category + "</td>";
+                element.appendChild(row);
+              }
+            }
+          };
+          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json");
+          xmlhttp.send();
+        }
 
-
+        function updateEventList() {
+          const element = document.getElementById("eventTable");
           const xmlhttp = new XMLHttpRequest();
           xmlhttp.onload = function() {
             var myObj = JSON.parse(this.responseText);
             for (var i = 0; i < myObj.total; i++) {
               const row = document.createElement("tr")
-              row.innerHTML = "<td class='abr'>" + myObj.items[i].abr + "</td><td class='price'>" + myObj.items[i].price + "</td><td class='category'>" + myObj.items[i].category + "</td>";
+              row.innerHTML = "<td class='abr'>" + myObj.incitems[i].abr + "</td><td class='price'>" + myObj.incitems[i].price + "</td><td class='karmatype'>" + myObj.incitems[i].category + "</td>";
               element.appendChild(row);
 
             }
           };
-          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json");
+          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreIncidents.json");
           xmlhttp.send();
-
-          let text = ""
-
-
-        }
-
-        function updateEventList() {
-
         }
 
         function updateRaceList() {
-
         }
 
       });
