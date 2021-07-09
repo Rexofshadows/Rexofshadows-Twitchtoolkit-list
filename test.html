@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Rexofshadows TwitchToolkit</title>
+    <script type="text/javascript">
+        const itemListURL = "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json";
+        const eventListURL = "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreEvents.json";
+    </script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Rexofshadows</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.twitch.tv/Rexofshadows">My Stream</a>
+            </li>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="container">
+              <h1 class="display-3">TwitchToolkit</h1>
+              <p>TwitchToolkit is a mod written by Twitch.tv/hodlhodl that integrates storytelling decisions into chat votes, awards viewers coins for watching, and those coins can be spent on items/events in game.</p>
+              <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#demo">Common Commands</button>
+              <div id="demo" class="collapse">
+                <ul class="list-group">
+                    <li class="list-group-item">!bal - check balance and karma rate</li>
+                    <li class="list-group-item">!buy - Syntax: !buy beer 6 - purchase an item or event</li>
+                    <li class="list-group-item">!whatiskarma - explains what the karma system is</li>
+                    <li class="list-group-item">!purchaselist - gives users a link to the public purchase list</li>
+                    <li class="list-group-item">!instructions - gives users info on using the mod</li>
+                    <li class="list-group-item">!modinfo - gives users info about the mod</li>
+                    <li class="list-group-item">!modsettings - gives user info on how many coins are being earned and global settings</li>
+                    <li class="list-group-item">!giftcoins - Syntax: !giftcoins @username 100 - give another viewer your coins</li>
+                    <li class="list-group-item">!toolkitcmds - shows all available commands to the user, this does not translate by default so it can be universally recognized.</li>
+                    <li class="list-group-item">!buy ticket - join the viewer name queue</li>
+                    <li class="list-group-item">!mypawnstory - view information about your pawns backstory</li>
+                    <li class="list-group-item">!mypawnskills - view information about your pawns skills</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#item">Items</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#event">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#race">Races</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#nolen">Nolen</a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="item" class="container tab-pane active bg-light"><br>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="">Price Between:</label>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="item-price-min" placeholder="0">
+                      </div>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="item-price-max" placeholder="100000">
+                      </div>
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                      </div>
+                      <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                  <p>Sort by clicking on table head!</p>
+                    <table class="table sortable">
+                      <thead class="thead-light" >
+                        <tr>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Category</th>
+                        </tr>
+                      </thead>
+                      <tbody id="itemTable" class="tableBody">
+                      </tbody>
+                    </table>
+                </div>
+                <div id="event" class="container tab-pane fade bg-light"><br>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="">Price Between:</label>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="item-price-min" placeholder="0">
+                      </div>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="item-price-max" placeholder="100000">
+                      </div>
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                      </div>
+                      <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                  <p>Sort by clicking on table head!</p>
+                  <table class="table sortable">
+                    <thead class="thead-light" >
+                      <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Karma Type</th>
+                      </tr>
+                    </thead>
+                    <tbody id="itemTable" class="table">
+                    </tbody>
+                  </table>
+                </div>
+                <div id="race" class="container tab-pane fade bg-light"><br>
+                  <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="">Price Between:</label>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="item-price-min" placeholder="0">
+                      </div>
+                      <div class="col-sm-2">
+                          <input type="number" class="form-control" id="item-price-max" placeholder="100000">
+                      </div>
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                      </div>
+                      <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                  <p>Sort by clicking on table head!</p>
+                  <table class="table sortable">
+                    <thead class="thead-light" >
+                      <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Catagory</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table">
+                    </tbody>
+                  </table>
+                </div>
+                <div id="nolen" class="container tab-pane fade bg-light"><br>
+                  <p>How the code monkey who put this together from scratch feels</p>
+                  <div class="tenor-gif-embed" data-postid="5064454" data-share-method="host" data-width="100%" data-aspect-ratio="1.4150943396226414"><a href="https://tenor.com/view/bloody-keyboard-typing-frustration-computer-gif-5064454">Bloody Keyboard GIF</a> from <a href="https://tenor.com/search/bloody-gifs">Bloody GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      $(document).ready(function(){
+        updateItemList();
+
+        $("#searchinput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $(".tableBody tr").filter(function() {
+            $(this).toggle($(this).find(".name").text().toLowerCase().indexOf(value) > -1 || $(this).find(".category").text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+
+        $("#item-price-min").keyup(function() {
+            updateItemFilter();
+        });
+
+        $("#item-price-max").keyup(function() {
+            updateItemFilter();
+        });
+
+        function updateItemFilter() {
+          var minPrice = parseInt($("#item-price-min").val());
+          if (!minPrice) {
+            minPrice = 0;
+          }
+          var maxPrice = parseInt($("#item-price-max").val());
+
+          $(".tableBody tr").each(function() {
+            var value = parseInt($(this).find(".price").html());
+            var allow = true;
+            if (!maxPrice) {
+              allow = value >= minPrice;
+            }
+            else {
+              allow = value >= minPrice && value <= maxPrice;
+            }
+            $(this).toggle(allow);
+          });
+        }
+
+        function updateItemList() {
+          const obj = JSON.parse(itemListURL);
+          let text = ""
+          for (let x in obj){
+            text += "<tr><td class='name'>" + obj[x].abr + "</td><td class='price'>" + obj[x].price + "</td><td class='category'>" + obj[x].category + "</td></tr>";
+          }
+          text += "</table>"
+          document.getElementByID("itemTable").innerHTML = text;
+        }
+
+        function updateEventList() {
+
+        }
+
+        function updateRaceList() {
+
+        }
+
+      });
+    </script>
+  </body>
+</html>
