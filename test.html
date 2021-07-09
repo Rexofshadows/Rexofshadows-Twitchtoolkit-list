@@ -215,13 +215,25 @@
         }
 
         function updateItemList() {
-          const obj = JSON.parse(itemListURL);
+          const element = document.getElementById("itemTable");
+
+
+          const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+            var myObj = JSON.parse(this.responseText);
+            for (var i = 0; i < myObj.total; i++) {
+              const row = document.createElement("tr")
+              row.innerHTML = "<td class='abr'>" + myObj.items[i].abr + "</td><td class='price'>" + myObj.items[i].price + "</td><td class='category'>" + myObj.items[i].category + "</td>";
+              element.appendChild(row);
+
+            }
+          };
+          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json");
+          xmlhttp.send();
+
           let text = ""
-          for (let x in obj){
-            text += "<tr><td class='name'>" + obj[x].abr + "</td><td class='price'>" + obj[x].price + "</td><td class='category'>" + obj[x].category + "</td></tr>";
-          }
-          text += "</table>"
-          document.getElementByID("itemTable").innerHTML = text;
+
+
         }
 
         function updateEventList() {
