@@ -40,6 +40,7 @@
         <div class="row">
           <div class="container">
               <h1 class="display-3">TwitchToolkit</h1>
+              <h6 class="display-7">If no data in tables please wait for it to load, freezes are not uncommon</h6>
               <p>TwitchToolkit is a mod written by Twitch.tv/hodlhodl that integrates storytelling decisions into chat votes, awards viewers coins for watching, and those coins can be spent on items/events in game.</p>
               <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#demo">Common Commands</button>
               <div id="demo" class="collapse">
@@ -127,7 +128,7 @@
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
                   <p>Sort by clicking on table head!</p>
-                  <table class="table display">
+                  <table id= "eDT"class="table display">
                     <thead class="thead-light" >
                       <tr>
                         <th>Name</th>
@@ -158,12 +159,12 @@
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
                   <p>Sort by clicking on table head! (Tab WIP)</p>
-                  <table class="table display">
+                  <table id="rDT" class="table display">
                     <thead class="thead-light" >
                       <tr>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>Catagory</th>
+                        <th>Mod</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -184,7 +185,7 @@
     <script>
       $(document).ready(function(){
         $('table.display').DataTable({
-          "ordering": false,
+          // "ordering": false,
           "pageLength": 50,
           //"columnDefs": [{ "searchable": false, "targets": 1 }],
           "dom": 'lrtip'
@@ -198,10 +199,10 @@
 
         var itemDtable = $('#iDT').DataTable();
         updateItemList();
-        // var eventDtable = $('#eDT').DataTable();
-        // updateEventList();
-        // var raceDtable = $('#rDT').DataTable();
-        // updateRaceList();
+        var eventDtable = $('#eDT').DataTable();
+        updateEventList();
+        var raceDtable = $('#rDT').DataTable();
+        updateRaceList();
 
         // $("#searchinput").on("keyup", function() {
         //   var value = $(this).val().toLowerCase();
@@ -249,12 +250,9 @@
             }
 
             if(value !== ""){
-              console.log("Name check: " + value.indexOf(name>=0) + " Category check: " + value.indexOf(category>=0));
-              console.log("Value type: " + typeof value + " Name type: " + typeof name + " Catagory type: " + typeof category);
-              console.log("Value length: " + value.length + " Name length: " + name.length + " Category length: " + category.length);
-              if (value.indexOf(name>=0)) {
+              if (name.indexOf( value ) !== -1) {
                 tAllow = true;
-              } else if (value.indexOf(category>=0)) {
+              } else if (category.indexOf( value ) !== -1) {
                 tAllow = true;
               } else {
                 tAllow = false;
@@ -265,7 +263,7 @@
         );
 
         function updateItemList() {
-          const element = document.getElementById("itemTable");
+          // const element = document.getElementById("itemTable");
           const xmlhttp = new XMLHttpRequest();
           xmlhttp.onload = function() {
             var myObj = JSON.parse(this.responseText);
@@ -284,26 +282,40 @@
         }
 
         function updateEventList() {
-          //
           // const element = document.getElementById("eventTable");
-          // const xmlhttp = new XMLHttpRequest();
-          // xmlhttp.onload = function() {
-          //   var myObj = JSON.parse(this.responseText);
-          //   for (var i = 0; i < myObj.total; i++) {
-          //     if(myObj.items[i].price > 0){
-          //       table.row.add( [
-          //         myObj.items[i].abr,
-          //         myObj.items[i].price,
-          //         myObj.items[i].category
-          //       ]).draw();
-          //     }
-          //   }
-          // };
-          // xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json");
-          // xmlhttp.send();
+          const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+            var myOBJ = JSON.parse(this.responseText);
+            for (var i = 0; i < myOBJ.races.length; i++) {
+              if(myOBJ.races[i].enabled == true){
+                raceDtable.row.add( [
+                  myOBJ.incitems[i].name,
+                  myOBJ.incitems[i].price,
+                  myOBJ.incitems[i].defName
+                ]).draw();
+              }
+            }
+          };
+          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreIncidents.json");
+          xmlhttp.send();
         }
 
         function updateRaceList() {
+          const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+            var myOBJ = JSON.parse(this.responseText);
+            for (var i = 0; i < myOBJ.total; i++) {
+              if(myOBJ.incitems[i].price > 0){
+                raceDtable.row.add( [
+                  myOBJ.incitems[i].abr,
+                  myOBJ.incitems[i].price,
+                  myOBJ.incitems[i].karmatype
+                ]).draw();
+              }
+            }
+          };
+          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/ShopExt.json");
+          xmlhttp.send();
         }
 
 
