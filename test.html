@@ -286,12 +286,12 @@
           const xmlhttp = new XMLHttpRequest();
           xmlhttp.onload = function() {
             var myOBJ = JSON.parse(this.responseText);
-            for (var i = 0; i < myOBJ.races.length; i++) {
-              if(myOBJ.races[i].enabled == true){
-                raceDtable.row.add( [
-                  myOBJ.incitems[i].name,
+            for (var i = 0; i < myOBJ.total; i++) {
+              if(myOBJ.incitems[i].price > 0){
+                eventDtable.row.add( [
+                  myOBJ.incitems[i].abr,
                   myOBJ.incitems[i].price,
-                  myOBJ.incitems[i].defName
+                  myOBJ.incitems[i].karmatype
                 ]).draw();
               }
             }
@@ -304,12 +304,13 @@
           const xmlhttp = new XMLHttpRequest();
           xmlhttp.onload = function() {
             var myOBJ = JSON.parse(this.responseText);
-            for (var i = 0; i < myOBJ.total; i++) {
-              if(myOBJ.incitems[i].price > 0){
+            alert(Object.keys(myOBJ.races).length);
+            for (var i = 0; i < Object.keys(myOBJ.races).length; i++) {
+              if(myOBJ.races[i].enabled == true){
                 raceDtable.row.add( [
-                  myOBJ.incitems[i].abr,
-                  myOBJ.incitems[i].price,
-                  myOBJ.incitems[i].karmatype
+                  myOBJ.races[i].name,
+                  myOBJ.races[i].price,
+                  myOBJ.races[i].defName
                 ]).draw();
               }
             }
