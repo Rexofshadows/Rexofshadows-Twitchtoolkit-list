@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <title>Rexofshadows TwitchToolkit</title>
-    <script type="text/javascript">
-        const itemListURL = "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json";
-        const eventListURL = "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreEvents.json";
-    </script>
+    <style>
+    td.details-control {
+    background: url('./details_open.png') no-repeat center center;
+    cursor: pointer;
+    }
+    tr.shown td.details-control {
+        background: url('./details_close.png') no-repeat center center;
+    }
+    </style>
 
   </head>
   <body>
@@ -159,12 +163,13 @@
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
                   <p>Sort by clicking on table head! (Tab WIP)</p>
-                  <table id="rDT" class="table display">
+                  <table id="rDT" class="table" style="width:100%">
                     <thead class="thead-light" >
                       <tr>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>Mod</th>
+                        <th>defName</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -201,22 +206,43 @@
         updateItemList();
         var eventDtable = $('#eDT').DataTable();
         updateEventList();
-        var raceDtable = $('#rDT').DataTable();
+        var raceDtable = null
         updateRaceList();
 
-        // $("#searchinput").on("keyup", function() {
-        //   var value = $(this).val().toLowerCase();
-        //   if (tab == "Items") {
-        //     itemDtable.search(value, false, true).draw();
-        //   }
-        //   else if (tab == "Events") {
-        //     eventDtable.search(value, false, true).draw();
-        //   }
-        //   else if (tab == "Races") {
-        //     raceDtable.search(value, false, true).draw();
-        //   }
-        //
-        // });
+        function format(d){
+
+         // `d` is the original data object for the row
+         return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+             '<tr>' +
+                 '<td>Mod:</td>' +
+                 '<td>' + d.mod + '</td>' +
+             '</tr>' +
+             '<tr>' +
+                 '<td>Description:</td>' +
+                 '<td>' + d.description + '</td>' +
+             '</tr>' +
+             '<tr>' +
+                 '<td>Extra info:</td>' +
+                 '<td>And any further details here (images etc)...</td>' +
+             '</tr>' +
+         '</table>';
+    }
+
+        $('#rDT tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = raceDtable.row( tr );
+
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+                    row.child( format(row.data()) ).show();
+                    tr.addClass('shown');
+                }
+            } );
 
         $("#searchinput, #item-price-min, #item-price-max").keyup(function() {
             if (tab == "Items") {
@@ -301,19 +327,38 @@
         }
 
         function updateRaceList() {
+
+
           const xmlhttp = new XMLHttpRequest();
           xmlhttp.onload = function() {
             var myOBJ = JSON.parse(this.responseText);
-            alert(Object.keys(myOBJ.races).length);
-            for (var i = 0; i < Object.keys(myOBJ.races).length; i++) {
-              if(myOBJ.races[i].enabled == true){
-                raceDtable.row.add( [
-                  myOBJ.races[i].name,
-                  myOBJ.races[i].price,
-                  myOBJ.races[i].defName
-                ]).draw();
-              }
-            }
+            raceDtable = $('#rDT').DataTable({
+              "data": myOBJ.races,
+              "columns": [
+                {"data": "name"},
+                {"data": "price"},
+                {"data": "defName"},
+                {
+                    "className":      'details-control',
+                    "orderable":      false,
+                    "searchable":     false,
+                    "data":           null,
+                    "defaultContent": ''
+                }],
+                "dom": 'lrtip'
+            });
+
+
+
+          //   for (var i = 0; i < Object.keys(myOBJ.races).length; i++) {
+          //     if(myOBJ.races[i].enabled == true){
+          //       raceDtable.row.add( [
+          //         myOBJ.races[i].name,
+          //         myOBJ.races[i].price,
+          //         myOBJ.races[i].defName
+          //       ]).draw();
+          //     }
+          //   }
           };
           xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/ShopExt.json");
           xmlhttp.send();
