@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <title>Rexofshadows TwitchToolkit</title>
     <script type="text/javascript">
         const itemListURL = "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json";
@@ -93,8 +96,7 @@
                       </div>
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
-                  <p>Sort by clicking on table head!</p>
-                    <table class="table sortable">
+                    <table id="iDT" class="table display">
                       <thead class="thead-light" >
                         <tr>
                           <th>Name</th>
@@ -102,10 +104,12 @@
                           <th>Category</th>
                         </tr>
                       </thead>
-                      <tbody id="itemTable" class="tableBody">
+                      <tbody>
                       </tbody>
                     </table>
                 </div>
+
+                <!-- Event Tab -->
                 <div id="event" class="container tab-pane fade bg-light"><br>
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" for="">Price Between:</label>
@@ -123,7 +127,7 @@
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
                   <p>Sort by clicking on table head!</p>
-                  <table class="table sortable">
+                  <table class="table display">
                     <thead class="thead-light" >
                       <tr>
                         <th>Name</th>
@@ -131,10 +135,12 @@
                         <th>Karma Type</th>
                       </tr>
                     </thead>
-                    <tbody id="eventTable" class="table">
+                    <tbody>
                     </tbody>
                   </table>
                 </div>
+
+                <!-- Race Tab -->
                 <div id="race" class="container tab-pane fade bg-light"><br>
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" for="">Price Between:</label>
@@ -152,7 +158,7 @@
                       <input type="text" id="searchinput" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
                   <p>Sort by clicking on table head! (Tab WIP)</p>
-                  <table class="table sortable">
+                  <table class="table display">
                     <thead class="thead-light" >
                       <tr>
                         <th>Name</th>
@@ -160,7 +166,7 @@
                         <th>Catagory</th>
                       </tr>
                     </thead>
-                    <tbody id="raceTable" class="table">
+                    <tbody>
                     </tbody>
                   </table>
                 </div>
@@ -177,58 +183,86 @@
     </main>
     <script>
       $(document).ready(function(){
-        updateItemList();
-        updateEventList();
-        updateRaceList();
-/*
+        $('table.display').DataTable({
+          "ordering": false,
+          "pageLength": 50,
+          //"columnDefs": [{ "searchable": false, "targets": 1 }],
+          "dom": 'lrtip'
+        });
+
+        var tab = "Items";
+
         $('.nav-tabs a').on('shown.bs.tab', function(event){
-          if($(event.target).text() == "Items"){
-            updateItemList();
-          }
-          else if ($(event.target).text() == "Events") {
-            updateEventList();
-          }
-          else if ($(event.target).text() == "Races") {
-            updateRaceList();
-          }
-        });
-*/
-
-
-        $("#searchinput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $(".tableBody tr").filter(function() {
-            $(this).toggle($(this).find(".name").text().toLowerCase().indexOf(value) > -1 || $(this).find(".category").text().toLowerCase().indexOf(value) > -1)
-          });
+          tab = $(event.target).text();         // active tab
         });
 
-        $("#item-price-min").keyup(function() {
-            updateItemFilter();
+        var itemDtable = $('#iDT').DataTable();
+        updateItemList();
+        // var eventDtable = $('#eDT').DataTable();
+        // updateEventList();
+        // var raceDtable = $('#rDT').DataTable();
+        // updateRaceList();
+
+        // $("#searchinput").on("keyup", function() {
+        //   var value = $(this).val().toLowerCase();
+        //   if (tab == "Items") {
+        //     itemDtable.search(value, false, true).draw();
+        //   }
+        //   else if (tab == "Events") {
+        //     eventDtable.search(value, false, true).draw();
+        //   }
+        //   else if (tab == "Races") {
+        //     raceDtable.search(value, false, true).draw();
+        //   }
+        //
+        // });
+
+        $("#searchinput, #item-price-min, #item-price-max").keyup(function() {
+            if (tab == "Items") {
+              itemDtable.draw();
+            }
+            else if (tab == "Events") {
+              eventDtable.draw();
+            }
+            else if (tab == "Races") {
+              raceDtable.draw();
+            }
         });
 
-        $("#item-price-max").keyup(function() {
-            updateItemFilter();
-        });
+        $.fn.dataTable.ext.search.push(
+          function( settings, data, dataIndex) {
+            var minPrice = parseInt($("#item-price-min").val());
+            var maxPrice = parseInt($("#item-price-max").val());
+            var value = $("#searchinput").val().toLowerCase();
+            var tAllow = true;
+            var pAllow = true;
+            var name = data[0].toLowerCase();
+            var price = parseFloat( data[1] ) || 0;
+            var category = data[2].toLowerCase();
 
-        function updateItemFilter() {
-          var minPrice = parseInt($("#item-price-min").val());
-          if (!minPrice) {
-            minPrice = 0;
-          }
-          var maxPrice = parseInt($("#item-price-max").val());
 
-          $(".tableBody tr").each(function() {
-            var value = parseInt($(this).find(".price").html());
-            var allow = true;
-            if (!maxPrice) {
-              allow = value >= minPrice;
+            if (!maxPrice && !minPrice || price >= minPrice && !maxPrice || price >= minPrice && price <= maxPrice || !minPrice && price <= maxPrice) {
+                pAllow = true;
             }
             else {
-              allow = value >= minPrice && value <= maxPrice;
+              pAllow = false;
             }
-            $(this).toggle(allow);
-          });
-        }
+
+            if(value !== ""){
+              console.log("Name check: " + value.indexOf(name>=0) + " Category check: " + value.indexOf(category>=0));
+              console.log("Value type: " + typeof value + " Name type: " + typeof name + " Catagory type: " + typeof category);
+              console.log("Value length: " + value.length + " Name length: " + name.length + " Category length: " + category.length);
+              if (value.indexOf(name>=0)) {
+                tAllow = true;
+              } else if (value.indexOf(category>=0)) {
+                tAllow = true;
+              } else {
+                tAllow = false;
+              }
+            }
+            return tAllow && pAllow;
+          }
+        );
 
         function updateItemList() {
           const element = document.getElementById("itemTable");
@@ -237,9 +271,11 @@
             var myObj = JSON.parse(this.responseText);
             for (var i = 0; i < myObj.total; i++) {
               if(myObj.items[i].price > 0){
-                const row = document.createElement("tr")
-                row.innerHTML = "<td class='abr'>" + myObj.items[i].abr + "</td><td class='price'>" + myObj.items[i].price + "</td><td class='category'>" + myObj.items[i].category + "</td>";
-                element.appendChild(row);
+                itemDtable.row.add( [
+                  myObj.items[i].abr,
+                  myObj.items[i].price,
+                  myObj.items[i].category
+                ]).draw();
               }
             }
           };
@@ -248,23 +284,28 @@
         }
 
         function updateEventList() {
-          const element = document.getElementById("eventTable");
-          const xmlhttp = new XMLHttpRequest();
-          xmlhttp.onload = function() {
-            var myObj = JSON.parse(this.responseText);
-            for (var i = 0; i < myObj.total; i++) {
-              const row = document.createElement("tr")
-              row.innerHTML = "<td class='abr'>" + myObj.incitems[i].abr + "</td><td class='price'>" + myObj.incitems[i].price + "</td><td class='karmatype'>" + myObj.incitems[i].category + "</td>";
-              element.appendChild(row);
-
-            }
-          };
-          xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreIncidents.json");
-          xmlhttp.send();
+          //
+          // const element = document.getElementById("eventTable");
+          // const xmlhttp = new XMLHttpRequest();
+          // xmlhttp.onload = function() {
+          //   var myObj = JSON.parse(this.responseText);
+          //   for (var i = 0; i < myObj.total; i++) {
+          //     if(myObj.items[i].price > 0){
+          //       table.row.add( [
+          //         myObj.items[i].abr,
+          //         myObj.items[i].price,
+          //         myObj.items[i].category
+          //       ]).draw();
+          //     }
+          //   }
+          // };
+          // xmlhttp.open("GET", "https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/StoreItems.json");
+          // xmlhttp.send();
         }
 
         function updateRaceList() {
         }
+
 
       });
     </script>
