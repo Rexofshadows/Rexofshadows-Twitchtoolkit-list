@@ -19,6 +19,10 @@
     tr.shown td.details-control {
         background: url('./details_close.png') no-repeat center center;
     }
+    table.dataTable tbody td.confl {
+    word-break: break-word;
+    vertical-align: top;
+    }
     </style>
 
   </head>
@@ -329,7 +333,7 @@
              '</tr>' +
              '<tr>' +
                  '<td>conflicts:</td>' +
-                 '<td>'+ d.conflicts + '</td>' +
+                 '<td class="confl">'+d.conflicts+ '</td>' +
              '</tr>' +
          '</table>';
         }
