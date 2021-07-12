@@ -79,6 +79,9 @@
                   <a class="nav-link" data-toggle="tab" href="#race">Races</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#trait">Traits</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="#nolen">Nolen</a>
                 </li>
               </ul>
@@ -89,18 +92,19 @@
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" for="">Price Between:</label>
                       <div class="col-sm-2">
-                          <input type="number" class="form-control min Items" id="item-price-min" placeholder="0">
+                          <input type="number" class="form-control min Items" placeholder="0">
                       </div>
                       <div class="col-sm-2">
-                          <input type="number" class="form-control max Items" id="item-price-max" placeholder="100000">
+                          <input type="number" class="form-control max Items" placeholder="100000">
                       </div>
                   </div>
                   <div class="input-group input-group-sm mb-3">
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
                       </div>
-                      <input type="text" id="searchinput" class="form-control search Items" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                      <input type="text"class="form-control search Items" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
+                  <p>Sort by clicking on table head!</p>
                     <table id="iDT" class="table display">
                       <thead class="thead-light" >
                         <tr>
@@ -119,17 +123,17 @@
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" for="">Price Between:</label>
                       <div class="col-sm-2">
-                          <input type="number" class="form-control min Events" id="item-price-min" placeholder="0">
+                          <input type="number" class="form-control min Events" placeholder="0">
                       </div>
                       <div class="col-sm-2">
-                          <input type="number" class="form-control max Events" id="item-price-max" placeholder="100000">
+                          <input type="number" class="form-control max Events" placeholder="100000">
                       </div>
                   </div>
                   <div class="input-group input-group-sm mb-3">
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
                       </div>
-                      <input type="text" id="searchinput" class="form-control search Events" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                      <input type="text" class="form-control search Events" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
                   <p>Sort by clicking on table head!</p>
                   <table id= "eDT"class="table display" style="width:100%">
@@ -150,19 +154,19 @@
                   <div class="form-group row">
                       <label class="col-sm-2 col-form-label" for="">Price Between:</label>
                       <div class="col-sm-2">
-                          <input type="number" class="form-control min Races" id="item-price-min" placeholder="0">
+                          <input type="number" class="form-control min Races" placeholder="0">
                       </div>
                       <div class="col-sm-2">
-                          <input type="number" class="form-control max Races" id="item-price-max" placeholder="100000">
+                          <input type="number" class="form-control max Races" placeholder="100000">
                       </div>
                   </div>
                   <div class="input-group input-group-sm mb-3">
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
                       </div>
-                      <input type="text" id="searchinput" class="form-control search Races" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                      <input type="text" class="form-control search Races" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
                   </div>
-                  <p>Sort by clicking on table head! (Tab WIP)</p>
+                  <p>Sort by clicking on table head!</p>
                   <table id="rDT" class="table" style="width:100%">
                     <thead class="thead-light" >
                       <tr>
@@ -176,9 +180,36 @@
                     </tbody>
                   </table>
                 </div>
+
+                <!-- traits Tab -->
+                <div id="trait" class="container tab-pane fade bg-light"><br>
+                  <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                      </div>
+                      <input type="text" class="form-control search Traits" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                  <p>Sort by clicking on table head! (Tab WIP, search only looks at name and mod)</p>
+                  <table id="tDT" class="table" style="width:100%">
+                    <thead class="thead-light" >
+                      <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Mod</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Nolen Tab -->
                 <div id="nolen" class="container tab-pane fade bg-light"><br>
                   <p>How the code monkey who put this together from scratch feels</p>
                   <div class="tenor-gif-embed" data-postid="5064454" data-share-method="host" data-width="100%" data-aspect-ratio="1.4150943396226414"><a href="https://tenor.com/view/bloody-keyboard-typing-frustration-computer-gif-5064454">Bloody Keyboard GIF</a> from <a href="https://tenor.com/search/bloody-gifs">Bloody GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                  <p>And what did rex give me? A gif...</p>
+                  <div class="tenor-gif-embed" data-postid="14207322" data-share-method="host" data-width="100%" data-aspect-ratio="1.7785714285714287"><a href="https://tenor.com/view/chocolate-chip-cookies-bake-goods-dessert-sweet-baking-gif-14207322">Chocolate Chip Cookies Bake Goods GIF</a> from <a href="https://tenor.com/search/chocolatechipcookies-gifs">Chocolatechipcookies GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
                 </div>
               </div>
           </div>
@@ -192,7 +223,6 @@
 
         $('.nav-tabs a').on('shown.bs.tab', function(event){
           tab = $(event.target).text();         // active tab
-
         });
 
         var itemDtable = $('#iDT').DataTable({
@@ -233,18 +263,38 @@
             {"data": "price"},
             {"data": "defName"},
             {
-                "className":      'details-control',
+                "className":      'details-control Races',
                 "orderable":      false,
                 "searchable":     false,
                 "data":           null,
                 "defaultContent": ''
             }],
+            "pageLength": 25,
+            "dom": 'lrtip'
+        });
+
+        var traitDtable = $('#tDT').DataTable({
+          "ajax": {
+            "url": 'https://raw.githubusercontent.com/Rexofshadows/Rexofshadows-Twitchtoolkit-list/master/ShopExt.json',
+            "dataSrc": "traits"
+          },
+          "columns": [
+            {"data": "name"},
+            {"data": "addPrice"},
+            {"data": "data.mod"},
+            {
+                "className":      'details-control Traits',
+                "orderable":      false,
+                "searchable":     false,
+                "data":           null,
+                "defaultContent": ''
+            }],
+            "pageLength": 50,
             "dom": 'lrtip'
         });
 
 
         function format(d){
-
          // `d` is the original data object for the row
          return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
              '<tr>' +
@@ -260,9 +310,31 @@
                  '<td>'+ d.data.stats + '</td>' +
              '</tr>' +
          '</table>';
-    }
+        }
 
-        $('#rDT tbody').on('click', 'td.details-control', function () {
+        function formatT(d){
+         // `d` is the original data object for the row
+         return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+             '<tr>' +
+                 '<td>defName:</td>' +
+                 '<td>' + d.defName + '</td>' +
+             '</tr>' +
+             '<tr>' +
+                 '<td>Description:</td>' +
+                 '<td>' + d.description + '</td>' +
+             '</tr>' +
+             '<tr>' +
+                 '<td>Extra info:</td>' +
+                 '<td>'+ d.data.stats + '</td>' +
+             '</tr>' +
+             '<tr>' +
+                 '<td>conflicts:</td>' +
+                 '<td>'+ d.conflicts + '</td>' +
+             '</tr>' +
+         '</table>';
+        }
+
+        $('#rDT tbody').on('click', 'td.details-control.Races', function () {
                 var tr = $(this).closest('tr');
                 var row = raceDtable.row( tr );
 
@@ -278,6 +350,22 @@
                 }
             } );
 
+          $('#tDT tbody').on('click', 'td.details-control.Traits', function () {
+                  var tr = $(this).closest('tr');
+                  var row = traitDtable.row( tr );
+
+                  if ( row.child.isShown() ) {
+                      // This row is already open - close it
+                      row.child.hide();
+                      tr.removeClass('shown');
+                  }
+                  else {
+                      // Open this row
+                      row.child( formatT(row.data()) ).show();
+                      tr.addClass('shown');
+                  }
+              } );
+
         $(".search, .min, .max").keyup(function() {
             if (tab == "Items") {
               itemDtable.draw();
@@ -287,6 +375,9 @@
             }
             else if (tab == "Races") {
               raceDtable.draw();
+            }
+            else if (tab == "Traits") {
+              traitDtable.draw();
             }
         });
 
