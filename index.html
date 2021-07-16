@@ -407,6 +407,7 @@
             var category = data[2].toLowerCase();
 
 
+
             if (!maxPrice && !minPrice || price >= minPrice && !maxPrice || price >= minPrice && price <= maxPrice || !minPrice && price <= maxPrice) {
                 pAllow = true;
             }
@@ -419,7 +420,7 @@
               return false;
             }
 
-            if(value !== ""){
+            if(value !== "" && tab != "Traits"){
               if (name.indexOf( value ) !== -1) {
                 tAllow = true;
               } else if (category.indexOf( value ) !== -1) {
@@ -427,7 +428,19 @@
               } else {
                 tAllow = false;
               }
+            } else if (value !== "" && tab == "Traits") {
+              var mod = data[3].toLowerCase();
+              if (name.indexOf( value ) !== -1) {
+                tAllow = true;
+              } else if (mod.indexOf( value ) !== -1) {
+                tAllow = true;
+              } else {
+                tAllow = false;
+              }
             }
+
+
+
             return tAllow && pAllow;
           }
         );
