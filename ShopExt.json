@@ -793,7 +793,7 @@
     {
       "description": "Timmy believes the human body is limited for a reason. To him, artificial body parts are unethical and disgusting.",
       "stats": [
-
+        "-10.00% handholding drive"
       ],
       "conflicts": [
         "transhumanist"
@@ -809,7 +809,7 @@
           "transhumanist"
         ],
         "stats": [
-
+          "-10.00% handholding drive"
         ]
       },
       "defName": "BodyPurist",
@@ -2486,7 +2486,7 @@
       },
       "defName": "TM_BoundlessTD",
       "name": "boundless",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -2788,7 +2788,7 @@
       },
       "defName": "TM_Gifted",
       "name": "magicallygifted",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 1500,
       "removePrice": 1,
@@ -2928,7 +2928,7 @@
       },
       "defName": "TM_Wanderer",
       "name": "wanderer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3070,7 +3070,7 @@
       },
       "defName": "InnerFire",
       "name": "firemage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3210,7 +3210,7 @@
       },
       "defName": "HeartOfFrost",
       "name": "icemage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3346,7 +3346,7 @@
       },
       "defName": "StormBorn",
       "name": "lightningmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3490,7 +3490,7 @@
       },
       "defName": "Arcanist",
       "name": "arcanemage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3632,7 +3632,7 @@
       },
       "defName": "Druid",
       "name": "druid",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3770,7 +3770,7 @@
       },
       "defName": "Paladin",
       "name": "paladin",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -3906,7 +3906,7 @@
       },
       "defName": "Summoner",
       "name": "summoner",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4048,7 +4048,7 @@
       },
       "defName": "Necromancer",
       "name": "necromancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4214,7 +4214,7 @@
       },
       "defName": "Lich",
       "name": "lich",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4360,7 +4360,7 @@
       },
       "defName": "Priest",
       "name": "priest",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4492,7 +4492,7 @@
       },
       "defName": "TM_Bard",
       "name": "entertainer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4624,7 +4624,7 @@
       },
       "defName": "TM_Bard",
       "name": "performer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4756,7 +4756,7 @@
       },
       "defName": "TM_Bard",
       "name": "minstrel",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -4888,7 +4888,7 @@
       },
       "defName": "TM_Bard",
       "name": "bard",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5040,7 +5040,7 @@
       },
       "defName": "Succubus",
       "name": "succubus",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5192,7 +5192,7 @@
       },
       "defName": "Warlock",
       "name": "warlock",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5340,7 +5340,7 @@
       },
       "defName": "Geomancer",
       "name": "geomancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5492,7 +5492,7 @@
       },
       "defName": "Technomancer",
       "name": "technomancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5634,7 +5634,7 @@
       },
       "defName": "BloodMage",
       "name": "bloodmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5778,7 +5778,7 @@
       },
       "defName": "Enchanter",
       "name": "enchanter",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -5914,7 +5914,7 @@
       },
       "defName": "Chronomancer",
       "name": "chronomancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -6050,7 +6050,7 @@
       },
       "defName": "ChaosMage",
       "name": "chaosmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -6300,7 +6300,7 @@
       },
       "defName": "TM_TheShadow",
       "name": "shadow",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -6548,7 +6548,7 @@
       },
       "defName": "TM_Brightmage",
       "name": "brightmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -6794,7 +6794,7 @@
       },
       "defName": "TM_Shaman",
       "name": "shaman",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -6930,7 +6930,7 @@
       },
       "defName": "PhysicalProdigy",
       "name": "physicallyadept",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 1500,
       "removePrice": 1,
@@ -7070,7 +7070,7 @@
       },
       "defName": "TM_Wayfarer",
       "name": "wayfarer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -7222,7 +7222,7 @@
       },
       "defName": "Gladiator",
       "name": "gladiator",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -7364,7 +7364,7 @@
       },
       "defName": "Ranger",
       "name": "woodsman",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -7506,7 +7506,7 @@
       },
       "defName": "Ranger",
       "name": "hunter",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -7648,7 +7648,7 @@
       },
       "defName": "Ranger",
       "name": "scout",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -7790,7 +7790,7 @@
       },
       "defName": "Ranger",
       "name": "ranger",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -7924,7 +7924,7 @@
       },
       "defName": "TM_Sniper",
       "name": "sharpshooter",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8058,7 +8058,7 @@
       },
       "defName": "TM_Sniper",
       "name": "sniper",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8192,7 +8192,7 @@
       },
       "defName": "TM_Sniper",
       "name": "mastersniper",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8326,7 +8326,7 @@
       },
       "defName": "TM_Sniper",
       "name": "legendarysniper",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8458,7 +8458,7 @@
       },
       "defName": "Bladedancer",
       "name": "bladesman",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8590,7 +8590,7 @@
       },
       "defName": "Bladedancer",
       "name": "blademaster",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8724,7 +8724,7 @@
       },
       "defName": "Bladedancer",
       "name": "bladedancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -8858,7 +8858,7 @@
       },
       "defName": "Bladedancer",
       "name": "legendarybladedancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -9004,7 +9004,7 @@
       },
       "defName": "Faceless",
       "name": "faceless",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -9146,7 +9146,7 @@
       },
       "defName": "TM_Psionic",
       "name": "psionic",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -9276,7 +9276,7 @@
       },
       "defName": "DeathKnight",
       "name": "deathknight",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -9418,7 +9418,7 @@
       },
       "defName": "TM_Monk",
       "name": "monk",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -9554,7 +9554,7 @@
       },
       "defName": "TM_Commander",
       "name": "commander",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -9698,7 +9698,7 @@
       },
       "defName": "TM_SuperSoldier",
       "name": "supersoldier",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -10384,7 +10384,7 @@
       },
       "defName": "TM_RedMage",
       "name": "redmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -10854,7 +10854,7 @@
       },
       "defName": "TM_Ninja",
       "name": "ninja",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -11318,7 +11318,7 @@
       },
       "defName": "TM_ElementalGunner",
       "name": "elementalgunner",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -11778,7 +11778,7 @@
       },
       "defName": "TM_Bombardier",
       "name": "bombardier",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -12248,7 +12248,7 @@
       },
       "defName": "TM_Railbreaker",
       "name": "railbreaker",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -12718,7 +12718,7 @@
       },
       "defName": "TM_Samurai",
       "name": "samurai",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -13190,7 +13190,7 @@
       },
       "defName": "TM_Gadgeteer",
       "name": "gadgeteer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -13660,7 +13660,7 @@
       },
       "defName": "TM_WindMage",
       "name": "windmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -14136,7 +14136,7 @@
       },
       "defName": "TM_Medic",
       "name": "medic",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -14602,7 +14602,7 @@
       },
       "defName": "TM_ChromaMage",
       "name": "chromamage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -15070,7 +15070,7 @@
       },
       "defName": "TM_Harbinger",
       "name": "harbinger",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -15540,7 +15540,7 @@
       },
       "defName": "TM_Reaper",
       "name": "reaper",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -16024,7 +16024,7 @@
       },
       "defName": "TM_Berserker",
       "name": "berserker",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -16492,7 +16492,7 @@
       },
       "defName": "TM_Scion",
       "name": "scion",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -16960,7 +16960,7 @@
       },
       "defName": "TM_Plaguedoctor",
       "name": "plaguedoctor",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -17424,7 +17424,7 @@
       },
       "defName": "TM_Cleric",
       "name": "cleric",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -17892,7 +17892,7 @@
       },
       "defName": "TM_Arbormancer",
       "name": "arbormancer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -18356,7 +18356,7 @@
       },
       "defName": "TM_Chainwarden",
       "name": "chainwarden",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -18824,7 +18824,7 @@
       },
       "defName": "TM_Ambusher",
       "name": "ambusher",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -19292,7 +19292,7 @@
       },
       "defName": "TM_Saboteur",
       "name": "saboteur",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -19764,7 +19764,7 @@
       },
       "defName": "TM_Keeper",
       "name": "keeper",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -20242,7 +20242,7 @@
       },
       "defName": "TM_Pridestalker",
       "name": "pridestalker",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -20732,7 +20732,7 @@
       },
       "defName": "TM_Starseeker",
       "name": "starseeker",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -21222,7 +21222,7 @@
       },
       "defName": "TM_Aspirant",
       "name": "aspirant",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -21684,7 +21684,7 @@
       },
       "defName": "TM_Hawkeye",
       "name": "hawkeye",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -22150,7 +22150,7 @@
       },
       "defName": "TM_Atronach",
       "name": "atronach",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -22624,7 +22624,7 @@
       },
       "defName": "TM_SupportSpecialist",
       "name": "supportspecialist",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -23098,7 +23098,7 @@
       },
       "defName": "TM_Scrapper",
       "name": "scrapper",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -23568,7 +23568,7 @@
       },
       "defName": "TM_Oracle",
       "name": "oracle",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -24038,7 +24038,7 @@
       },
       "defName": "TM_Mystic",
       "name": "mystic",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -24506,7 +24506,7 @@
       },
       "defName": "TM_Spellbreaker",
       "name": "spellbreaker",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -24970,7 +24970,7 @@
       },
       "defName": "TM_Duskbringer",
       "name": "duskbringer",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -25442,7 +25442,7 @@
       },
       "defName": "TM_Thunderblessed",
       "name": "thunderblessed",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -25910,7 +25910,7 @@
       },
       "defName": "TM_Deadeye",
       "name": "deadeye",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -26378,7 +26378,7 @@
       },
       "defName": "TM_Spellthief",
       "name": "spellthief",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -26846,7 +26846,7 @@
       },
       "defName": "TM_Dragoon",
       "name": "dragoon",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -27324,7 +27324,7 @@
       },
       "defName": "TM_BlackMage",
       "name": "blackmage",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -27798,7 +27798,7 @@
       },
       "defName": "TM_Scholar",
       "name": "scholar",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -28270,7 +28270,7 @@
       },
       "defName": "TM_Gunbreaker",
       "name": "gunbreaker",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -28732,7 +28732,7 @@
       },
       "defName": "TM_Gunner",
       "name": "gunner",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -29210,7 +29210,7 @@
       },
       "defName": "TM_Warrior",
       "name": "warrior",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -29678,7 +29678,7 @@
       },
       "defName": "TM_Nomad",
       "name": "nomad",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -30148,7 +30148,7 @@
       },
       "defName": "TM_Guardian",
       "name": "guardian",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -30614,7 +30614,7 @@
       },
       "defName": "TM_Holosmith",
       "name": "holosmith",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -31084,7 +31084,7 @@
       },
       "defName": "TM_Troubadour",
       "name": "troubadour",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -31554,7 +31554,7 @@
       },
       "defName": "TM_Gambler",
       "name": "gambler",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -32020,7 +32020,7 @@
       },
       "defName": "TM_Chef",
       "name": "chef",
-      "canAdd": true,
+      "canAdd": false,
       "canRemove": true,
       "addPrice": 10000,
       "removePrice": 1,
@@ -33831,6 +33831,36 @@
       "addPrice": 3500,
       "removePrice": 1,
       "degree": 0
+    },
+    {
+      "description": "Timmy is not affected by the effects of aging thanks to Ra's Vacoule.\n(EvolvedOrgansRedux)",
+      "stats": [
+
+      ],
+      "conflicts": [
+
+      ],
+      "bypassLimit": false,
+      "data": {
+        "canBypassLimit": false,
+        "customName": false,
+        "karmaTypeForRemoving": null,
+        "mod": "EvolvedOrgansRedux",
+        "karmaTypeForAdding": null,
+        "conflicts": [
+
+        ],
+        "stats": [
+
+        ]
+      },
+      "defName": "RasVacoule",
+      "name": "rasvacoule",
+      "canAdd": true,
+      "canRemove": true,
+      "addPrice": 3500,
+      "removePrice": 1,
+      "degree": 0
     }
   ],
   "races": [
@@ -33895,7 +33925,7 @@
       "defName": "M7Mech",
       "enabled": true,
       "name": "M7 Mechanised infantry",
-      "price": 270000
+      "price": 108000
     },
     {
       "data": {
@@ -33933,7 +33963,7 @@
       "defName": "M8Mech",
       "enabled": true,
       "name": "M8 Mechanised infantry",
-      "price": 270000
+      "price": 108000
     },
     {
       "data": {
@@ -33975,7 +34005,7 @@
       "defName": "Android5Tier",
       "enabled": true,
       "name": "T5 Android",
-      "price": 120000
+      "price": 48000
     },
     {
       "data": {
@@ -34015,7 +34045,7 @@
       "defName": "Android4Tier",
       "enabled": true,
       "name": "T4 Android",
-      "price": 90000
+      "price": 36000
     },
     {
       "data": {
@@ -34054,7 +34084,7 @@
       "defName": "Android3Tier",
       "enabled": true,
       "name": "T3 Android",
-      "price": 72000
+      "price": 28800
     },
     {
       "data": {
@@ -34097,7 +34127,7 @@
       "defName": "Android1Tier",
       "enabled": true,
       "name": "T1 Android",
-      "price": 21000
+      "price": 8400
     },
     {
       "data": {
@@ -34141,7 +34171,7 @@
       "defName": "Android2Tier",
       "enabled": true,
       "name": "T2 Android",
-      "price": 37500
+      "price": 15000
     },
     {
       "data": {
@@ -34172,7 +34202,7 @@
       "defName": "O21_FR_Chitine",
       "enabled": true,
       "name": "Chitine",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34202,7 +34232,7 @@
       "defName": "O21_FR_DarkElf",
       "enabled": true,
       "name": "Dark Elf",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34229,7 +34259,7 @@
       "defName": "O21_FR_Dwarf",
       "enabled": true,
       "name": "Dwarf",
-      "price": 8750
+      "price": 5250
     },
     {
       "data": {
@@ -34257,7 +34287,7 @@
       "defName": "O21_FR_Firbolg",
       "enabled": true,
       "name": "Firbolg",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34284,7 +34314,7 @@
       "defName": "O21_FR_Gith",
       "enabled": true,
       "name": "Gith",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34314,7 +34344,7 @@
       "defName": "O21_FR_Goblin",
       "enabled": true,
       "name": "Goblin",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34343,7 +34373,7 @@
       "defName": "O21_FR_Halfling",
       "enabled": true,
       "name": "Halfling",
-      "price": 8750
+      "price": 5250
     },
     {
       "data": {
@@ -34372,7 +34402,7 @@
       "defName": "O21_FR_HalfOrc",
       "enabled": true,
       "name": "Half-Orc",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34400,7 +34430,7 @@
       "defName": "O21_FR_Hobgoblin",
       "enabled": true,
       "name": "Hobgoblin",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34429,7 +34459,7 @@
       "defName": "O21_FR_Illithid",
       "enabled": true,
       "name": "Illithid",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34457,7 +34487,7 @@
       "defName": "O21_FR_Killoren",
       "enabled": true,
       "name": "Killoren",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34490,7 +34520,7 @@
       "defName": "O21_FR_Kobold",
       "enabled": true,
       "name": "Kobold",
-      "price": 7500
+      "price": 4500
     },
     {
       "data": {
@@ -34520,7 +34550,7 @@
       "defName": "O21_FR_MoonElf",
       "enabled": true,
       "name": "Moon Elf",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34548,7 +34578,7 @@
       "defName": "O21_FR_Orc",
       "enabled": true,
       "name": "Orc",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34581,7 +34611,7 @@
       "defName": "O21_FR_SunElf",
       "enabled": true,
       "name": "Sun Elf",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34608,7 +34638,7 @@
       "defName": "O21_FR_Tabaxi",
       "enabled": true,
       "name": "Tabaxi",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34637,7 +34667,7 @@
       "defName": "O21_FR_Tiefling",
       "enabled": true,
       "name": "Tiefling",
-      "price": 10000
+      "price": 6000
     },
     {
       "data": {
@@ -34671,7 +34701,7 @@
       "defName": "O21_FR_Warforged",
       "enabled": true,
       "name": "Warforged",
-      "price": 37500
+      "price": 15000
     },
     {
       "data": {
@@ -34701,7 +34731,7 @@
       "defName": "O21_FR_WoodElf",
       "enabled": true,
       "name": "Wood Elf",
-      "price": 10000
+      "price": 6000
     }
   ]
 }
