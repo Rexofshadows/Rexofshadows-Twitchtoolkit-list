@@ -216,16 +216,6 @@
 		"karmatype": "Good"
 	},
 	{
-		"abr": "Death",
-		"price": 1500,
-		"karmatype": "Bad"
-	},
-	{
-		"abr": "dropraid",
-		"price": 15000,
-		"karmatype": "Bad"
-	},
-	{
 		"abr": "sapperraid",
 		"price": 1500,
 		"karmatype": "Bad"
@@ -391,5 +381,5 @@
 		"karmatype": "Doom"
 	}
 	],
-	"total": 78
+	"total": 76
 }
