@@ -3782,7 +3782,7 @@
 	},
 	{
 		"abr": "arcalleum",
-		"price": 220,
+		"price": 22,
 		"category": "Raw resources",
 		"defname": "TM_Arcalleum"
 	},
@@ -4153,12 +4153,6 @@
 		"defname": "TableAutopsy"
 	},
 	{
-		"abr": "auxilaryheart",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Abd_SecondHeart"
-	},
-	{
 		"abr": "auxiliaryai(agricultural)",
 		"price": -10,
 		"category": "Archotech",
@@ -4513,18 +4507,6 @@
 		"defname": "SpellOf_SpiritOfLight"
 	},
 	{
-		"abr": "butcher'snails",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Brain_Nails"
-	},
-	{
-		"abr": "calcium-alloyribcage",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Ribcage"
-	},
-	{
 		"abr": "cashregister",
 		"price": -10,
 		"category": "Furniture",
@@ -4639,12 +4621,6 @@
 		"defname": "BookOfPsionic"
 	},
 	{
-		"abr": "combatserumgland",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Abd_Combat"
-	},
-	{
 		"abr": "combatstyle:bladedancer",
 		"price": -10,
 		"category": "Skill books",
@@ -4703,12 +4679,6 @@
 		"price": -10,
 		"category": "Cybernetic",
 		"defname": "ANN_CompressionStomach"
-	},
-	{
-		"abr": "cranialplating",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Skull_Plating"
 	},
 	{
 		"abr": "crashedbattery",
@@ -4859,12 +4829,6 @@
 		"price": -10,
 		"category": "Animals",
 		"defname": "TM_Dire_WolfR"
-	},
-	{
-		"abr": "distendablejaw",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Jaw_Distend"
 	},
 	{
 		"abr": "divinetome:paladin",
@@ -5143,18 +5107,6 @@
 		"defname": "ExoskeletonSuit"
 	},
 	{
-		"abr": "extranano-filterlung",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Abd_ThirdLung"
-	},
-	{
-		"abr": "extradextrousarm",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_NormalArm"
-	},
-	{
 		"abr": "eyepatch",
 		"price": 740,
 		"category": "Simple parts",
@@ -5171,12 +5123,6 @@
 		"price": -10,
 		"category": "Weaponized gases",
 		"defname": "Canister_FearGas"
-	},
-	{
-		"abr": "featheredwings",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Back_Wing"
 	},
 	{
 		"abr": "fenghuang",
@@ -5311,12 +5257,6 @@
 		"defname": "Weapon_GrenadeFirefoam"
 	},
 	{
-		"abr": "flameretardantskin",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Skin_Flame"
-	},
-	{
 		"abr": "flaregun",
 		"price": -10,
 		"category": "Ranged weapons",
@@ -5431,12 +5371,6 @@
 		"defname": "GoldenEye"
 	},
 	{
-		"abr": "graspingleg",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Leg_Hand"
-	},
-	{
 		"abr": "greenthumb",
 		"price": -10,
 		"category": "Cybernetic",
@@ -5527,12 +5461,6 @@
 		"defname": "AdvancedReplacementLeg"
 	},
 	{
-		"abr": "highpressurepincer",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_HighPincer"
-	},
-	{
 		"abr": "hobgoblin",
 		"price": -10,
 		"category": "Animal",
@@ -5555,12 +5483,6 @@
 		"price": -10,
 		"category": "Simple parts",
 		"defname": "HookHand"
-	},
-	{
-		"abr": "hormoneregulator",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Abd_Hormone"
 	},
 	{
 		"abr": "hottub",
@@ -5705,12 +5627,6 @@
 		"price": -10,
 		"category": "Headgear",
 		"defname": "Apparel_ImprovGasMask"
-	},
-	{
-		"abr": "interferenceshielding",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Skull_Shielding"
 	},
 	{
 		"abr": "intermediatenanokit",
@@ -5861,12 +5777,6 @@
 		"price": -10,
 		"category": "Hygiene",
 		"defname": "LogBoiler"
-	},
-	{
-		"abr": "lymphaticproliferator",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Abd_Lymph"
 	},
 	{
 		"abr": "m.u.f.funit",
@@ -6115,12 +6025,6 @@
 		"defname": "TM_Manaweave"
 	},
 	{
-		"abr": "manipulatortail",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Tail_Hand"
-	},
-	{
 		"abr": "manticore",
 		"price": -10,
 		"category": "Animals",
@@ -6211,12 +6115,6 @@
 		"defname": "MicroScyther"
 	},
 	{
-		"abr": "micro-analyzernose",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Nose"
-	},
-	{
 		"abr": "mindclearer",
 		"price": -10,
 		"category": "Neurotrainers",
@@ -6295,30 +6193,6 @@
 		"defname": "O21_FR_MoonElf"
 	},
 	{
-		"abr": "multichamberstomach",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Stomach"
-	},
-	{
-		"abr": "multifrequencyear",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Ear"
-	},
-	{
-		"abr": "multilayereddermalplating",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Skin_Plating"
-	},
-	{
-		"abr": "multispectrumeye",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Eye"
-	},
-	{
 		"abr": "musclestimulator",
 		"price": -10,
 		"category": "Archotech",
@@ -6329,12 +6203,6 @@
 		"price": -10,
 		"category": "Cybernetic",
 		"defname": "ANN_Musclewire"
-	},
-	{
-		"abr": "musculaturebraces",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Back_Muscle"
 	},
 	{
 		"abr": "musechip",
@@ -6397,12 +6265,6 @@
 		"defname": "EVOR_Resource_Mechanites"
 	},
 	{
-		"abr": "nano-alveolilung",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Lung"
-	},
-	{
 		"abr": "necromancerspell:lichform",
 		"price": -10,
 		"category": "Scrolls",
@@ -6427,22 +6289,10 @@
 		"defname": "SpeedMindImplant"
 	},
 	{
-		"abr": "neuralhyperthreader",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Brain_Hyper"
-	},
-	{
 		"abr": "neuroenhancer",
 		"price": -10,
 		"category": "Cybernetic",
 		"defname": "ANN_NeuroEnhancer"
-	},
-	{
-		"abr": "neuro-acceleratedspine",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Spine"
 	},
 	{
 		"abr": "neuromodbooster",
@@ -6523,12 +6373,6 @@
 		"defname": "WCE2_OrganModificationKit"
 	},
 	{
-		"abr": "ossifiedbonesaber",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_BoneSaber"
-	},
-	{
 		"abr": "outerblade",
 		"price": -10,
 		"category": "Cybernetic",
@@ -6589,12 +6433,6 @@
 		"defname": "MM_PetrifyingGazeImplant"
 	},
 	{
-		"abr": "pheromonereleasernose",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Nose_Pheromones"
-	},
-	{
 		"abr": "phoenix",
 		"price": -10,
 		"category": "Animals",
@@ -6611,12 +6449,6 @@
 		"price": -10,
 		"category": "Animal",
 		"defname": "RoboticSheep"
-	},
-	{
-		"abr": "plaguelesions",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Artifact_Lesions"
 	},
 	{
 		"abr": "plasteelframecoverings",
@@ -6835,12 +6667,6 @@
 		"defname": "RimFridge_QuadRefrigerator"
 	},
 	{
-		"abr": "quadlobeliver",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Liver"
-	},
-	{
 		"abr": "radiator",
 		"price": -10,
 		"category": "Hygiene",
@@ -6853,12 +6679,6 @@
 		"defname": "Canister_RageGas"
 	},
 	{
-		"abr": "ra'svacoule",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Abd_NoAge"
-	},
-	{
 		"abr": "reactiveshimmerworms",
 		"price": -10,
 		"category": "Evolved body parts",
@@ -6869,24 +6689,6 @@
 		"price": -10,
 		"category": "Neurotrainers",
 		"defname": "ANN_Reconditioner"
-	},
-	{
-		"abr": "reinforcedleg",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Leg_Normal"
-	},
-	{
-		"abr": "reinforcedtortoiseshell",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Artifact_Tortoise"
-	},
-	{
-		"abr": "rendingclaw",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_RendingClaw"
 	},
 	{
 		"abr": "ringofblood",
@@ -6989,12 +6791,6 @@
 		"price": -10,
 		"category": "Cybernetic",
 		"defname": "ANN_SensoricEarside"
-	},
-	{
-		"abr": "serratedstingertail",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Tail_Blade"
 	},
 	{
 		"abr": "serum:supersoldier",
@@ -7181,12 +6977,6 @@
 		"price": -10,
 		"category": "Android",
 		"defname": "SoldierMindImplant"
-	},
-	{
-		"abr": "sonicimpactmace",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_SonicMace"
 	},
 	{
 		"abr": "spiritbearmeat",
@@ -7453,12 +7243,6 @@
 		"defname": "Techprint_EVOR_Research_Artifact_Lesions"
 	},
 	{
-		"abr": "tentaclecluster",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Back_Hand"
-	},
-	{
 		"abr": "thenorncrown",
 		"price": -10,
 		"category": "Evolved body parts",
@@ -7663,24 +7447,6 @@
 		"defname": "SurgeonMindImplant"
 	},
 	{
-		"abr": "tri-platedlimb",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_PlatedLimb"
-	},
-	{
-		"abr": "triplefilterpasskidney",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Kidney"
-	},
-	{
-		"abr": "triwovenprimaryheart",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Heart"
-	},
-	{
 		"abr": "unfinishedarcanebook",
 		"price": -10,
 		"category": "Skill books",
@@ -7721,18 +7487,6 @@
 		"price": -10,
 		"category": "Manufactured",
 		"defname": "RepairKitAT"
-	},
-	{
-		"abr": "variableinsulationskin",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Skin_Insulation"
-	},
-	{
-		"abr": "venomousfangs",
-		"price": -10,
-		"category": "Evolved body parts",
-		"defname": "EVOR_Item_Jaw_Venom"
 	},
 	{
 		"abr": "venomousquillimplant",
@@ -16166,7 +15920,7 @@
 	},
 	{
 		"abr": "alphapoly",
-		"price": 195,
+		"price": -10,
 		"category": "Raw resources",
 		"defname": "AlphaPoly"
 	},
@@ -16250,7 +16004,7 @@
 	},
 	{
 		"abr": "betapoly",
-		"price": 392,
+		"price": -10,
 		"category": "Raw resources",
 		"defname": "BetaPoly"
 	},
@@ -16862,7 +16616,7 @@
 	},
 	{
 		"abr": "alloysmelter",
-		"price": 475,
+		"price": -10,
 		"category": "Production",
 		"defname": "VMEu_MetalSmelter"
 	},
@@ -17341,5 +17095,5 @@
 		"defname": "Ammo_GreatArrow_Iron"
 	}
 	],
-	"total": 2890
+	"total": 2860
 }
