@@ -359,7 +359,7 @@
     "LocalCooldown": 0,
     "Mod": "Twitch Toolkit"
   },
-  "Death": {
+  "raid": {
     "EventType": "Default",
     "HasGlobalCooldown": false,
     "HasLocalCooldown": false,
